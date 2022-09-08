@@ -1,7 +1,7 @@
 '''import cv2
 
 
-gstreamer_str = "sudo gst-launch-1.0 rtspsrc location=rtsp://192.168.1.55:8080/h264_ulaw.sdp latency=10 ! queue ! rtph264depay ! h264parse ! avdec_h264 ! videoconvert ! videoscale ! appsink"
+gstreamer_str = "sudo gst-launch-1.0 rtspsrc location=rtsp://192.168.29.61:8080/h264_ulaw.sdp latency=5 ! queue ! rtph264depay ! h264parse ! avdec_h264 ! videoconvert ! videoscale ! appsink"
 
 cap = cv2.VideoCapture(gstreamer_str, cv2.CAP_GSTREAMER)
 
@@ -44,7 +44,7 @@ def face_extractor(img):
     return cropped_face
 
 # Initialize cam
-gstreamer_str = "sudo gst-launch-1.0 rtspsrc location=rtsp://192.168.1.55:8080/h264_ulaw.sdp latency=10 ! queue ! rtph264depay ! h264parse ! avdec_h264 ! videoconvert ! videoscale ! appsink"
+gstreamer_str = "sudo gst-launch-1.0 rtspsrc location=rtsp://192.168.29.61:8080/h264_ulaw.sdp latency=3 ! queue ! rtph264depay ! h264parse ! avdec_h264 ! videoconvert ! videoscale ! appsink"
 
 
 cap = cv2.VideoCapture(gstreamer_str, cv2.CAP_GSTREAMER)
@@ -79,7 +79,7 @@ cv2.destroyAllWindows()
 print("Collecting Samples Complete")
 '''
 # Initialize cam
-gstreamer_str = "sudo gst-launch-1.0 rtspsrc location=rtsp://192.168.1.55:8080/h264_ulaw.sdp latency=10 ! queue ! rtph264depay ! h264parse ! avdec_h264 ! videoconvert ! videoscale ! appsink"
+gstreamer_str = "sudo gst-launch-1.0 rtspsrc location=rtsp://192.168.29.61:8080/h264_ulaw.sdp latency=10 ! queue ! rtph264depay ! h264parse ! avdec_h264 ! videoconvert ! videoscale ! appsink"
 
 data_path = './myfaces/'
 # a=listdir('d:/faces')
