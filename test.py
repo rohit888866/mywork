@@ -79,7 +79,7 @@ cv2.destroyAllWindows()
 print("Collecting Samples Complete")
 '''
 # Initialize cam
-gstreamer_str = "sudo gst-launch-1.0 rtspsrc location=rtsp://192.168.29.61:8080/h264_ulaw.sdp latency=10 ! queue ! rtph264depay ! h264parse ! avdec_h264 ! videoconvert ! videoscale ! appsink"
+gstreamer_str = "sudo gst-launch-1.0 rtspsrc location=rtsp://192.168.29.61:8080/h264_ulaw.sdp latency=3 ! queue ! rtph264depay ! h264parse ! avdec_h264 ! videoconvert ! videoscale ! appsink"
 
 data_path = './myfaces/'
 # a=listdir('d:/faces')
