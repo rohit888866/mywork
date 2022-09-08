@@ -43,6 +43,8 @@ wget https://github.com/rohit888866/mywork/raw/main/myfaces.tar.xz
 tar -xvf myfaces.tar.xz
 apt-get install wget -y
 
+
+mkdir LTS 
 wget https://raw.githubusercontent.com/rohit888866/mywork/main/test.py
 wget https://raw.githubusercontent.com/rohit888866/mywork/main/haarcascade_frontalface_default.xml
 python3 test.py
