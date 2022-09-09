@@ -1,3 +1,4 @@
+
 pip uninstall opencv-python
 pip uninstall opencv-contrib-python
 sudo apt-get purge 'opencv'
@@ -42,6 +43,11 @@ tar -xvf myfaces.tar.xz
 apt-get install wget -y
 
 mkdir LTS
-wget https://raw.githubusercontent.com/rohit888866/mywork/main/test.py
-wget https://raw.githubusercontent.com/rohit888866/mywork/main/haarcascade_frontalface_default.xml
-python3 test.py
+
+mkdir trainer
+cd trainer
+wget https://github.com/rohit888866/ram/releases/download/v1.2/trainer.yml
+cd ..
+wget https://raw.githubusercontent.com/rohit888866/ram/main/face_recognition.py
+wget https://raw.githubusercontent.com/rohit888866/ram/main/haarcascade_frontalface_default.xml
+python3 face_recognition.py
