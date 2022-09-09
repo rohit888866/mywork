@@ -79,7 +79,7 @@ cv2.destroyAllWindows()
 print("Collecting Samples Complete")
 '''
 # Initialize cam
-gstreamer_str = "sudo gst-launch-1.0 rtspsrc location=rtsp://192.168.29.61:8080/h264_ulaw.sdp latency=3 ! queue ! rtph264depay ! h264parse ! avdec_h264 ! videoconvert ! videoscale ! appsink"
+gstreamer_str = "sudo gst-launch-1.0 rtspsrc location=rtsp://192.168.1.55:8080/h264_ulaw.sdp latency=0 ! queue ! rtph264depay ! h264parse ! avdec_h264 ! videoconvert ! videoscale ! appsink"
 
 data_path = './myfaces/'
 # a=listdir('d:/faces')
@@ -129,7 +129,7 @@ def face_detector(img, size=0.5):
     return img, roi
 
 
-# Open Webcam
+# Open cam
 cap = cv2.VideoCapture(gstreamer_str, cv2.CAP_GSTREAMER)
 
 yz=0
@@ -153,7 +153,7 @@ while True:
             
         cv2.putText(image, display_string, (100, 120), cv2.FONT_HERSHEY_COMPLEX, 1, (255,120,150), 2)
         
-        if confidence > 50:
+        if confidence > 80:
              
             cv2.putText(image, "Rohit Rathore", (250, 450), cv2.FONT_HERSHEY_COMPLEX, 1, (0,255,0), 2)
             cv2.imshow('Face Recognition', image )
